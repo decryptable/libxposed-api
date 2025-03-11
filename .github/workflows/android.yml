@@ -30,7 +30,7 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Set up Maven settings
-      run: mkdir ~/.m2 && cp .github/workflows/settings.xml ~/.m2/settings.xml
+      run: cp .github/workflows/settings.xml ~/.m2/settings.xml && cat ~/.m2/settings.xml
       env:
         GITHUB_ACTOR: ${{ github.actor }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
