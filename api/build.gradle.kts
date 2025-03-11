@@ -20,8 +20,8 @@ android {
     }
 
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_1_8
-        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
     publishing {
@@ -36,12 +36,12 @@ publishing {
     publications {
         register<MavenPublication>("api") {
             artifactId = "api"
-            group = "io.github.libxposed"
+            group = "io.github.decryptable"
             version = "100"
             pom {
                 name.set("api")
                 description.set("Modern Xposed API")
-                url.set("https://github.com/libxposed/api")
+                url.set("https://github.com/decryptable/libxposed-api")
                 licenses {
                     license {
                         name.set("Apache License 2.0")
@@ -51,12 +51,12 @@ publishing {
                 developers {
                     developer {
                         name.set("libxposed")
-                        url.set("https://libxposed.github.io")
+                        url.set("https://decryptable.github.io")
                     }
                 }
                 scm {
-                    connection.set("scm:git:https://github.com/libxposed/api.git")
-                    url.set("https://github.com/libxposed/api")
+                    connection.set("scm:git:https://github.com/decryptable/libxposed-api.git")
+                    url.set("https://github.com/decryptable/libxposed-api")
                 }
             }
             afterEvaluate {
@@ -65,11 +65,6 @@ publishing {
         }
     }
     repositories {
-        maven {
-            name = "ossrh"
-            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            credentials(PasswordCredentials::class)
-        }
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/libxposed/api")
