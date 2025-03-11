@@ -45,7 +45,7 @@ publishing {
                 licenses {
                     license {
                         name.set("Apache License 2.0")
-                        url.set("https://github.com/decryptable/api/blob/master/LICENSE")
+                        url.set("https://github.com/decryptable/libxposed-api/blob/master/LICENSE")
                     }
                 }
                 developers {
@@ -67,7 +67,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/decryptable/api")
+            url = uri("https://maven.pkg.github.com/decryptable/libxposed-api")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
