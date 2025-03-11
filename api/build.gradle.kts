@@ -34,12 +34,12 @@ android {
 
 publishing {
     publications {
-        register<MavenPublication>("api") {
-            artifactId = "api"
+        register<MavenPublication>("libxposed-api") {
+            artifactId = "libxposed-api"
             group = "io.github.decryptable"
             version = "1.0.0"
             pom {
-                name.set("api")
+                name.set("libxposed-api")
                 description.set("Modern Xposed API")
                 url.set("https://github.com/decryptable/libxposed-api")
                 licenses {
