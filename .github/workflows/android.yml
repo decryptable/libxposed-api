@@ -45,6 +45,8 @@ jobs:
       env:
         GITHUB_ACTOR: ${{ github.actor }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Debug check artifacts
+      run: ls -R ~/.m2/repository/ || echo "No artifacts found"
     - name: Upload library
       uses: actions/upload-artifact@v4
       with:
