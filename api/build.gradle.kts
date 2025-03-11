@@ -37,7 +37,7 @@ publishing {
         register<MavenPublication>("api") {
             artifactId = "api"
             group = "io.github.decryptable"
-            version = "100"
+            version = "1.0.0"
             pom {
                 name.set("api")
                 description.set("Modern Xposed API")
@@ -45,12 +45,12 @@ publishing {
                 licenses {
                     license {
                         name.set("Apache License 2.0")
-                        url.set("https://github.com/libxposed/api/blob/master/LICENSE")
+                        url.set("https://github.com/decryptable/api/blob/master/LICENSE")
                     }
                 }
                 developers {
                     developer {
-                        name.set("libxposed")
+                        name.set("decryptable")
                         url.set("https://decryptable.github.io")
                     }
                 }
@@ -67,7 +67,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/libxposed/api")
+            url = uri("https://maven.pkg.github.com/decryptable/api")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
